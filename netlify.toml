@@ -29,7 +29,7 @@ HUGO_VERSION = "0.64.1"
 [context.next.environment]
 HUGO_ENABLEGITINFO = "true"
 
-[redirects]
+[[redirects]]
   from = "https://5e4b7708f5d7780009bf32a7--sangam-test.netlify.com/"
   to = "https://sangam-test.netlify.com/"
   status = 200
