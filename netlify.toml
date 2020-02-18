@@ -1,1 +1,6 @@
-
+[[redirects]]
+  from = "https://5e4b71e1a99e910008a22bcd--sangam-test.netlify.com/"
+  to = "https://sangam-test.netlify.com/"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}
