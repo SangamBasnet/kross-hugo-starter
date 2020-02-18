@@ -28,3 +28,9 @@ HUGO_VERSION = "0.64.1"
 
 [context.next.environment]
 HUGO_ENABLEGITINFO = "true"
+
+[[redirects]]
+  from = "https://5e4b82b5662dfb0008f2102b--sangam-test.netlify.com/*"
+  to = "https://sangam-test.netlify.com/:splat"
+  status = 301
+  force = true #COMMENT: ensure that we always redirect
