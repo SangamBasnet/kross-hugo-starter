@@ -1,6 +1,30 @@
-[[redirects]]
-  from = "https://5e4b71e1a99e910008a22bcd--sangam-test.netlify.com/"
-  to = "https://sangam-test.netlify.com/"
-  status = 200
-  force = true
-  headers = {X-From = "Netlify"}
+[build]
+publish = "public"
+command = "hugo --gc --minify"
+
+[context.production.environment]
+HUGO_VERSION = "0.58.0"
+HUGO_ENV = "production"
+HUGO_ENABLEGITINFO = "true"
+
+[context.split1]
+command = "hugo --gc --minify --enableGitInfo"
+
+[context.split1.environment]
+HUGO_VERSION = "0.58.0"
+HUGO_ENV = "production"
+
+[context.deploy-preview]
+command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
+
+[context.deploy-preview.environment]
+HUGO_VERSION = "0.58.0"
+
+[context.branch-deploy]
+command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+
+[context.branch-deploy.environment]
+HUGO_VERSION = "0.58.0"
+
+[context.next.environment]
+HUGO_ENABLEGITINFO = "true"
